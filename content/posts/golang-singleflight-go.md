@@ -1,5 +1,5 @@
 ---
-title:"Golang singleflight 使用和原理"
+title: "Golang singleflight 使用和原理"
 date: "2021-01-18"
 tags:
   - golang
