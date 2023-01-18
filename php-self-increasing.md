@@ -77,7 +77,7 @@ php 的一些小众的用法，很多php老司机，使用时也会出问题。
 #define UPPER_CASE 2
 #define NUMERIC 3
 
-static void ZEND_FASTCALL increment_string(zval *str) /* {{{ */
+static void ZEND_FASTCALL increment_string(zval *str) 
 {
 	int carry=0;  // 标识是否需要进位
 	size_t pos=Z_STRLEN_P(str)-1; // 从字符串末端开始遍历
@@ -163,5 +163,3 @@ static void ZEND_FASTCALL increment_string(zval *str) /* {{{ */
 
   ```
 > [php 自增运算符 Doc](https://www.php.net/manual/zh/language.operators.increment.php)
-  -----
-  路漫漫其修远兮，吾将上下而求索。
