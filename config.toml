@@ -1,4 +1,4 @@
-baseURL = 'http://lpflpf.github.io/'
+baseURL = 'http://page.lpflpf.cn/'
 languageCode = 'zh-cn'
 title = '搬砖程序员带你飞'
 theme = 'compose'
