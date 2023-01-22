@@ -9,7 +9,7 @@ tags:
     - serialize / unserialize
     - clone
 
-category:
+categories:
     - php
 ---
 

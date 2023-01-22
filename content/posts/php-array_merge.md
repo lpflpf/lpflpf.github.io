@@ -5,7 +5,7 @@ subtitle:   "PHP 函数使用"
 date:       2018-06-05
 author:     "李朋飞"
 header-img: "img/post-bg-2015.jpg"
-category:   php
+categories:   [ "php" ]
 tags:
     - array_merge
 ---

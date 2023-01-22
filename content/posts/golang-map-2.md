@@ -4,6 +4,8 @@ date: 2020-04-23 17:45:23
 tags:
   - golang
   - map
+categories:
+  - 源码分析
 ---
 
 本文在golang map 数据结构的基础上，学习一个make 是如何构造的。

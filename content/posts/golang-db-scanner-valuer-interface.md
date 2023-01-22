@@ -4,7 +4,7 @@ date: 2021-01-11 11:47:35
 tags:
   - golang
   - database/sql
-category:
+categories:
   - golang
 
 ---

@@ -5,7 +5,7 @@ subtitle:   "运行流程解析"
 date:       2018-06-06
 author:     "李朋飞"
 header-img: "img/post-bg-2015.jpg"
-category:   
+categories:   
     - php
 tags:
     - cycle life

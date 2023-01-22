@@ -4,7 +4,7 @@ date: 2019-06-20 16:34:38
 tags:
   - golang
   - go build
-category:
+categories:
   - golang
 ---
 

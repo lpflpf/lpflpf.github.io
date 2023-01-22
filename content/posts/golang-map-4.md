@@ -2,6 +2,10 @@
 title: Golang Map 实现 （四）
 date: 2020-04-28 18:20:30
 tags:
+  - golang
+  - map
+categories:
+  - 源码分析
 ---
 
 golang map 操作，是map 实现中较复杂的逻辑。因为当赋值时，为了减少hash 冲突链的长度过长问题，会做map 的扩容以及数据的迁移。而map 的扩容以及数据的迁移也是关注的重点。

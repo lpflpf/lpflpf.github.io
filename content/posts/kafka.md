@@ -4,7 +4,7 @@ date: 2021-04-19 15:15:00
 tags:
     - golang
     - kafka
-category:
+categories:
     - Message Queue
 ---
 

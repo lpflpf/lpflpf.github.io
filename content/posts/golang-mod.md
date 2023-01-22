@@ -3,7 +3,7 @@ title: go mod
 date: 2019-06-20 18:21:43
 tags:
     - go build
-category:
+categories:
     - golang
 ---
 

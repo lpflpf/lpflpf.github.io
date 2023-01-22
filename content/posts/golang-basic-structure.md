@@ -8,7 +8,8 @@
    - golang
    - base structure
 
- category: golang
+ categories: 
+   - golang
 ---
 
 

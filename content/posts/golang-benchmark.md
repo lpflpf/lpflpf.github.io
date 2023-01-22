@@ -6,7 +6,7 @@ tags:
   - golang
   - benchmark
 
-category: 
+categories: 
   - golang
 ---
 

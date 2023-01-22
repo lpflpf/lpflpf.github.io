@@ -3,7 +3,7 @@ title: 为什么需要 noCopy
 date: 2019-07-05 11:48:05
 tags:
   - noCopy
-category:
+categories:
   - golang
   - php
 ---

@@ -3,7 +3,8 @@ title: json map 和 struct 编码对比
 date: 2019-06-27 13:55:40
 tags:
   - golang
-category: golang
+categories: 
+  - golang
 ---
 
 本文对比试验采用官方包做json map 和struct 编码。 

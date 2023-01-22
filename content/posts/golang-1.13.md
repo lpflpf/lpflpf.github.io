@@ -3,7 +3,7 @@ title: golang 1.13
 date: 2019-09-19 15:15:00
 tags:
     - golang
-category:
+categories:
     - golang
 ---
 

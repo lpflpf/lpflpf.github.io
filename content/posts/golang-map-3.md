@@ -4,6 +4,8 @@ date: 2020-04-26 09:21:23
 tags:
   - golang
   - map
+categories:
+  - 源码分析
 ---
 
 本文在golang map 数据结构的基础上，学习map 数据是如何访问的。

@@ -5,7 +5,7 @@ tags:
     - PHP 开发
     - ctype函数簇
 
-category:
+categories:
     - php
 ---
 ctype_digit 问题说明。

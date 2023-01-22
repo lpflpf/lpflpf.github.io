@@ -5,7 +5,8 @@ tags:
   - golang
   - reflect
 
-category: golang
+categories: 
+  - golang
 ---
 
 本文主要为了在对golang反射学习后做一个小练习，使用100行代码实现一个通用的RPC服务。

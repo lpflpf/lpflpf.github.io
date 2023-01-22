@@ -3,6 +3,8 @@ title: Golang Http 学习（二） Http Client 的实现
 date: 2020-06-01 09:50:58
 tags:
   - golang
+categories:
+  - 源码分析
 ---
 
 golang http Client 的实现,  从 源码入手， 总结Client 的实现方式。

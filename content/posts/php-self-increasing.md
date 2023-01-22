@@ -4,7 +4,7 @@ date: 2019-06-25 10:29:43
 tags:
   - PHP 开发
   - PHP Source Analysis
-category:
+categories:
     - php
 ---
 

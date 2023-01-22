@@ -5,6 +5,8 @@ date: 2020-04-21 16:56:17
 tags:
   - golang
   - map
+categories:
+  - 源码分析
 ---
 
 本文学习 Golang 的 Map 数据结构，以及map buckets 的数据组织结构。

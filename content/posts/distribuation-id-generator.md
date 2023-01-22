@@ -8,7 +8,7 @@
    - id generator
    - distribuation
 
- category:
+ categories:
    - 分布式 
 ---
 

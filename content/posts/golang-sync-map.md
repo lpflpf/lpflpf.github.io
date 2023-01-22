@@ -5,7 +5,8 @@ tags:
   - golang
   - sync
 
-category: golang
+categories: 
+  - golang
 ---
 
 本文主要简单介绍 sync.Map 的使用和实现。

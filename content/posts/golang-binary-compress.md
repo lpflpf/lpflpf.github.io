@@ -4,7 +4,8 @@ date: 2019-06-20 17:59:20
 tags: 
   - go build
   - golang
-category: golang
+categories: 
+  - golang
 ---
 
 golang 压缩的方式: 1. build 添加去除调试标识; 2. 使用upx 工具。

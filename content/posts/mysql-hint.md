@@ -5,7 +5,8 @@ subtitle:   "hint mysql"
 date:       2018-05-26
 author:     "李朋飞"
 header-img: "img/post-bg-2015.jpg"
-category:   mysql
+categories:   
+    - mysql
 tags:
     - Mysql
     - Hint
