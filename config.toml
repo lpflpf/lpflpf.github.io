@@ -1,7 +1,7 @@
-DefaultContentLanguage = "zh"
+DefaultContentLanguage = "en"
 author = "lpflpf"
 baseURL = "https://page.lpflpf.cn/"
-copyright = "Copyright © 2008–2019"
+copyright = """<a target="_blank" href="http://beian.miit.gov.cn/">京ICP备17037267号</a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502046463" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/images/gonganbeian.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010502046463号</p></a>""" 
 disqusShortname = "飞哥"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
@@ -19,9 +19,8 @@ style = "monokailight"
 unsafe = true
 
 [params]
-bannerFont = "fonts/exampleFont" 
+bannerFont = "fonts/noto-serif-sc-v7-latin_chinese-simplified-regular" 
 description = """
-Tokiwa-iro is the theme color of this site.
 """ 
 env = "production" # for Google Analytics and DISQUS.
 favicon = "img/favicon-32x32.png" 
@@ -54,10 +53,10 @@ name = "About"
 url = "/about/"
 weight = 3
 
-[taxonomies]
-category = "categories"
-series = "series"
-tag = "tags"
+# [taxonomies]
+# category = "categories"
+# series = "series"
+# tag = "tags"
 
 [social]
 github = "http://github.com/lpflpf"
@@ -66,3 +65,5 @@ mail = "mailto:lipengfei634626165@163.com"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
+
