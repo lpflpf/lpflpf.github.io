@@ -45,13 +45,19 @@ weight = 2
 [[menu.main]]
 name = "Categories"
 url = "/categories/"
-weight = 2
+weight = 3
 
 [[menu.main]]
 identifier = "about"
 name = "About"
 url = "/about/"
-weight = 3
+weight = 5
+
+[[menu.main]]
+identifier = "tools"
+name = "Tools"
+url = "/tools/"
+weight = 4
 
 # [taxonomies]
 # category = "categories"
@@ -65,5 +71,3 @@ mail = "mailto:lipengfei634626165@163.com"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
-
-
