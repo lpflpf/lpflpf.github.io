@@ -5,7 +5,7 @@ copyright = """<a target="_blank" href="http://beian.miit.gov.cn/">京ICP备1703
 disqusShortname = "飞哥"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
-googleAnalytics = "UA-FAKE" ## or "G-xxxxxxxx" in Google Analytics v4, in hugo v0.82+
+googleAnalytics = "G-GZD9GWLDGZ" ## or "G-xxxxxxxx" in Google Analytics v4, in hugo v0.82+
 hasCJKLanguage = true
 languageCode = "cn"
 theme = "hugo-theme-tokiwa"
