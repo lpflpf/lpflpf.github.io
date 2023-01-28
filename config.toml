@@ -2,7 +2,7 @@ DefaultContentLanguage = "en"
 author = "lpflpf"
 baseURL = "https://page.lpflpf.cn/"
 copyright = """<a target="_blank" href="http://beian.miit.gov.cn/">京ICP备17037267号</a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502046463" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/images/gonganbeian.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010502046463号</p></a>""" 
-disqusShortname = "飞哥"
+disqusShortname = "lpflpf"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 googleAnalytics = "G-GZD9GWLDGZ" ## or "G-xxxxxxxx" in Google Analytics v4, in hugo v0.82+
