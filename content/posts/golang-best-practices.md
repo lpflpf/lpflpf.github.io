@@ -1,6 +1,10 @@
 ---
 title: "Golang 最佳实践"
 date: 2023-01-28T15:11:27+08:00
+categories:
+  - golang
+tags:
+  - 最佳实践
 ---
 
 [Google Go 语言最佳实践](https://google.github.io/styleguide/go/best-practices) | [中文版本](https://tonybai.com/google-go-style/google-go-style-best-practices/)
