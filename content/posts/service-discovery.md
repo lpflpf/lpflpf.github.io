@@ -106,7 +106,7 @@ ipvs 保存了vip 到 pod 的映射
 
 ## 参考：
 
-- [landscape.cncf.io](landscape.cncf.io)
+- [landscape.cncf.io](http://landscape.cncf.io)
 - https://microservices.io/
 - [ipvs on k8s](https://kubernetes.io/blog/2018/07/09/ipvs-based-in-cluster-load-balancing-deep-dive/)
 - [eureka 实现原理](https://github.com/Netflix/eureka/wiki/Understanding-eureka-client-server-communication)
