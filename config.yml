@@ -43,6 +43,12 @@ params:
       logo: /images/avatar.png
   verification:
     so: "d4de62256da7a72fa89fc026636a79e4"
+  tagcloud:
+    enable : true
+    min : 14 # Minimum font size in px
+    max : 32 # Maximum font size in px
+    peakCount : 10 # Maximum count of posts per tag
+    orderby : "name"
 
   home:
     profile:
@@ -88,9 +94,16 @@ menu:
     - url: 'https://www.sojson.com/jsondiff.html'
       name: jsondiff
       parent: tools
+outputFormats:
+  BaiduUrls:
+    baseName: "baidu_urls"
+    mediaType: "text/plain"
+    isPlainText: true
+    isHTML: false
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+    - BaiduUrls
 
