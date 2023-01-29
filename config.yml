@@ -1,0 +1,96 @@
+baseURL: 'https://page.lpflpf.cn/'
+theme: FixIt
+author:
+  name: lpflpf
+  email: lipengfei634626165@163.com
+markup:
+  highlight:
+    noClasses: false
+params:
+  bannerFont: fonts/noto-serif-sc-v7-latin_chinese-simplified-regular
+  description: ''
+  enable: true
+  footer:
+    icp: '<a target="_blank" href="http://beian.miit.gov.cn/">京ICP备17037267号</a>'
+    gov: >-
+      <a target="_blank"
+      href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502046463">京公网安备
+      11010502046463号</a>
+    hugo: false
+    author: lpflpf
+  page:
+    comment:
+      enable: true
+      disqus:
+        enable: true
+        shortname: lpflpf
+    library:
+      js:
+        googleAdsense: >-
+          https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4191383710205711
+    code:
+      copy: true
+      edit: false
+      maxShownLines : 30
+  analytics:
+    enable: true
+    google:
+      id: "G-GZD9GWLDGZ"
+      anonymizeIP: true
+  header:
+    title:
+      name: 搬砖程序员带你飞
+      logo: /images/avatar.png
+  verification:
+    so: "d4de62256da7a72fa89fc026636a79e4"
+
+  home:
+    profile:
+      enable: true
+      title: 搬砖程序员带你飞
+      subtitle: 砖搬得多了，就能盖楼
+      avatarURL: 'https://page.lpflpf.cn/images/avatar.png'
+      avatarMenu: '123'
+      gravatarEmail: ''
+  social:
+    Github: lpflpf
+    Email: 'mailto:lipengfei634626165@163.com'
+menu:
+  main:
+    - identifier: post
+      name: Posts
+      url: /
+      weight: 1
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 2
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 3
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 5
+    - identifier: tools
+      name: tools
+      weight: 4
+      HasChildren: true
+    - parent: tools
+      url: /tools
+      name: tool
+    - parent: tools
+      url: 'https://mholt.github.io/curl-to-go/'
+      name: curl-to-go
+      params:
+        icon: fa-brands fa-readme
+    - url: 'https://www.sojson.com/jsondiff.html'
+      name: jsondiff
+      parent: tools
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
