@@ -6,6 +6,22 @@ author:
 markup:
   highlight:
     noClasses: false
+    codeFences: true
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false
+    guessSyntax: true
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
 params:
   bannerFont: fonts/noto-serif-sc-v7-latin_chinese-simplified-regular
   description: ''

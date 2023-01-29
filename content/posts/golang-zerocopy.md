@@ -35,7 +35,7 @@ func main() {
 
 通过跟踪代码，画出了如下的简易流程图：
 
-[!ServeFile](servefile.png)
+![ServeFile](servefile.png)
 
 在最后一个步骤tcp Write，即将数据写入到tcp流中。serveFile 使用的是 `io.CopyN(w, sendContent, sendSize)`
 当代码看到这里，自我感觉很满意。因为实现貌似和我们想象中没有太大出入。
