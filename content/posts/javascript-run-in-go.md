@@ -15,20 +15,20 @@ filebeat 是由golang 实现的，其间接引用了`https://github.com/dop251/g
 
 经过调研，实现javascript运行时的包有如下几个：
 
-- github.com/robertkrimen/otto [Star 7.1K]
+- `github.com/robertkrimen/otto` [Star 7.1K]
   - 最初使的项目
   - 性能较低
   - go 1.18
   - ECMA 不支持严格模式
   - 正则不完全兼容
   - es6 特性不支持
-- https://github.com/dop251/goja [Star 3.5K]
+- `github.com/dop251/goja` [Star 3.5K]
   - filebeat使用
   - 思想来源于ottov
   - go 1.16
   - ECMAScript 5.1 引擎
   - 支持 regex and strict mode
-- https://github.com/rogchap/v8go [Star 2.5K]
+- `github.com/rogchap/v8go` [Star 2.5K]
   - 基于google的V8引擎实现(chrome)
   - cgo实现，性能最高,与系统兼容性略差.（可能需要自己编译v8)
   - 兼容性比较好
