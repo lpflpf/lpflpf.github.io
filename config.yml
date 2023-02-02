@@ -90,22 +90,22 @@ menu:
       name: Categories
       url: /categories/
       weight: 3
-    - identifier: notes
-      name: notes
+    - identifier: post
+      name: Notes
       url: /notes/
       weight: 4
     - identifier: about
       name: About
       url: /about/
       weight: 6
-    - identifier: tools
+    - identifier: Tools
       name: tools
       weight: 5 
       HasChildren: true
-    - parent: tools
-      url: /tools
+    - parent: Tools
+      url: /Tools
       name: tool
-    - parent: tools
+    - parent: Tools
       url: 'https://mholt.github.io/curl-to-go/'
       name: curl-to-go
       params:
