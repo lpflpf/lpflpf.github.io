@@ -99,12 +99,12 @@ menu:
       url: /about/
       weight: 6
     - identifier: Tools
-      name: tools
+      name: Tools
       weight: 5 
       HasChildren: true
     - parent: Tools
       url: /Tools
-      name: tool
+      name: MyTool
     - parent: Tools
       url: 'https://mholt.github.io/curl-to-go/'
       name: curl-to-go
@@ -112,7 +112,7 @@ menu:
         icon: fa-brands fa-readme
     - url: 'https://www.sojson.com/jsondiff.html'
       name: jsondiff
-      parent: tools
+      parent: Tools
 outputFormats:
   BaiduUrls:
     baseName: "baidu_urls"
