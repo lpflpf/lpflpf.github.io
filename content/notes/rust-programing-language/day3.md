@@ -6,6 +6,7 @@ tags:
 category:
   - 学习笔记
 ---
+> 阅读[Rust程序设计语言](https://kaisery.github.io/trpl-zh-cn/title-page.html)笔记
 
 # 变量和可变性
 
