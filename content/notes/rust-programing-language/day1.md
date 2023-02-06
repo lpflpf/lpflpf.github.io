@@ -3,8 +3,9 @@ title: "Rust 编程语言 - 安装"
 date: 2023-01-31T12:38:22+08:00
 tags:
   - rust
-category:
+categories:
   - 学习笔记
+type: posts
 ---
 
 

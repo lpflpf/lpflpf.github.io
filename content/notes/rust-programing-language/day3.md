@@ -3,9 +3,11 @@ title: "Rust 编程语言 - 常见编程概念"
 date: 2023-02-02
 tags:
   - rust
-category:
+categories:
   - 学习笔记
+type: posts
 ---
+
 > 阅读[Rust程序设计语言](https://kaisery.github.io/trpl-zh-cn/title-page.html)笔记
 
 # 变量和可变性

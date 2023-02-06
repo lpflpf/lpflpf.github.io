@@ -1,24 +1,30 @@
 ---
-title: "认识所有权"
+title: "Rust 编程语言 - 认识所有权"
 date: 2023-02-03
 tags:
   - rust
 categories:
-      - 学习笔记
+  - 学习笔记
+type: posts
+lightgallery: true
+keywords: 
+  - rust 所有权
+  - 学习笔记
 ---
 
 > 阅读[Rust程序设计语言](https://kaisery.github.io/trpl-zh-cn/title-page.html)笔记
 
-# 什么是所有权
+## 什么是所有权
 
 **所有权(ownership)的好处**：可以不使用垃圾回收(garbage collector)，即可保障内存安全。
 
-> 规则：
+{{< admonition type=tip title="规则" open=true >}}
 > - Rust 每个值都有一个所有者
 > - 值在任何时刻都有且仅有一个所有者
 > - 所有者离开作用域，值将被丢弃
+{{< /admonition >}}
 
-## 变量与数据的交互方式 - 移动
+### 变量与数据的交互方式 - 移动
 - drop 函数是释放内存的函数，在变量离开作用域后，自动调用释放内存；
 - 对于整形的变量拷贝，由于不可变，会放入栈中
 - 对于string的拷贝复制,则只是拷贝了头指针
@@ -27,9 +33,9 @@ categories:
   let s1 = String::from("hello");
   let s2 = s1; // 指针移动(move)
 ```
-![](day4-1.png)
+{{<figure src="day4-1.png" width="400" >}}
 
-## 变量与数据的交互方式 - 克隆
+### 变量与数据的交互方式 - 克隆
 
 克隆，数据深度拷贝
 - 堆上数据的拷贝，需要通过clone 深度拷贝
@@ -43,7 +49,7 @@ categories:
 
     println!("s1 = {}, s2 = {}", s1, s2);
 ```
-## 函数与所有权
+### 函数与所有权
 
 ```rust
 fn main() {
@@ -75,4 +81,18 @@ fn makes_copy(some_integer: i32) { // some_integer 进入作用域
 函数返回值也是如此，会出现所有权的转移
 
 
-# 引用与借用
+## 引用与借用
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let len = calculate_length(&s1); 
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+// s 是引用
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+```
+{{<figure src="day4-2.png" width="600" >}}

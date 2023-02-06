@@ -33,7 +33,18 @@ params:
       11010502046463号</a>
     hugo: false
     author: lpflpf
+  app:
+    iconColor : "#5bbad5"
+    defaultTheme: dark
+    tileColor : "#da532c"
+    themeColor:
+      light : "#f8f8f8"
+      dark : "#252627"
   page:
+    toc: #导航
+      enable : true
+      auto: true
+      position: "right"
     comment:
       enable: true
       disqus:
@@ -76,43 +87,7 @@ params:
   social:
     Github: lpflpf
     Email: 'mailto:lipengfei634626165@163.com'
-menu:
-  main:
-    - identifier: post
-      name: Posts
-      url: /
-      weight: 1
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 2
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 3
-    - identifier: post
-      name: Notes
-      url: /notes/
-      weight: 4
-    - identifier: about
-      name: About
-      url: /about/
-      weight: 6
-    - identifier: Tools
-      name: Tools
-      weight: 5 
-      HasChildren: true
-    - parent: Tools
-      url: /Tools
-      name: MyTool
-    - parent: Tools
-      url: 'https://mholt.github.io/curl-to-go/'
-      name: curl-to-go
-      params:
-        icon: fa-brands fa-readme
-    - url: 'https://www.sojson.com/jsondiff.html'
-      name: jsondiff
-      parent: Tools
+
 outputFormats:
   BaiduUrls:
     baseName: "baidu_urls"
@@ -126,3 +101,98 @@ outputs:
     - JSON
     - BaiduUrls
 
+
+defaultContentLanguage: "zh-cn"
+languages:
+#  en:
+#    languageName: "English"
+#    languageCode : "en"
+#    title : "My New Hugo FixIt Site"
+#    menu:
+#      main:
+#        - identifier: post
+#          name: Posts
+#          url: /posts/
+#          weight: 1
+#        - identifier: tags
+#          name: Tags
+#          url: /tags/
+#          weight: 2
+#        - identifier: categories
+#          name: Categories
+#          url: /categories/
+#          weight: 3
+#        - identifier: notes
+#          name: Notes
+#          url: /notes/
+#          weight: 4
+#        - identifier: about
+#          name: About
+#          url: /about/
+#          weight: 6
+#        - identifier: Tools
+#          name: Tools
+#          weight: 5 
+#          HasChildren: true
+#        - identifier: tools
+#          parent: Tools
+#          url: /Tools
+#          name: MyTool
+#        - identifier: "curltogo"
+#          parent: Tools
+#          url: 'https://mholt.github.io/curl-to-go/'
+#          name: curl-to-go
+#          params:
+#            icon: fa-brands fa-readme
+#        - identifier: "jsondiff"
+#          url: 'https://www.sojson.com/jsondiff.html'
+#          name: jsondiff
+#          parent: Tools
+  zh-cn:
+    hasCJKLanguage: true
+    languageName: "简体中文"
+    title : "搬砖程序员带你飞"
+    languageCode : "zh-CN"
+    menu:
+      main: 
+        - identifier: post
+          name: 文章
+          url: /posts/
+          weight: 1
+        - identifier: tags
+          name: 标签
+          url: /tags/
+          weight: 2
+        - identifier: categories
+          name: 分类
+          url: /categories/
+          weight: 3
+        - identifier: notes
+          name: 读书笔记 
+          url: /notes/
+          weight: 4
+        - identifier: about
+          name: 关于
+          url: /about/
+          weight: 6
+        - identifier: Tools
+          name: 工具
+          weight: 5 
+          HasChildren: true
+        - identifier: tools
+          parent: Tools
+          url: /Tools
+          name: 我的工具集
+          weight: 1
+        - identifier: "curltogo"
+          parent: Tools
+          url: 'https://mholt.github.io/curl-to-go/'
+          name: curl-to-go
+          params:
+            icon: fa-brands fa-readme
+          weight: 2
+        - identifier: "jsondiff"
+          url: 'https://www.sojson.com/jsondiff.html'
+          name: jsondiff
+          parent: Tools
+          weight: 3

@@ -3,8 +3,9 @@ title: "Rust 编程语言 - 猜数字游戏"
 date: 2023-02-01
 tags:
   - rust
-category:
+categories:
   - 学习笔记
+type: posts
 ---
 > 阅读[Rust程序设计语言](https://kaisery.github.io/trpl-zh-cn/title-page.html)笔记
 
