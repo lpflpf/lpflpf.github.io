@@ -83,6 +83,7 @@ fn makes_copy(some_integer: i32) { // some_integer 进入作用域
 
 ## 引用与借用
 
+1. (默认)引用不许修改引用的值
 ```rust
 fn main() {
     let s1 = String::from("hello");
@@ -96,3 +97,38 @@ fn calculate_length(s: &String) -> usize {
 }
 ```
 {{<figure src="day4-2.png" width="600" >}}
+
+### 可变引用
+
+1. 通过增加 mut 修饰，使引用的值可以被修改；
+2. 如果已经有一个对变量的可变引用，同一个作用域不能再增加对该变量的引用；（避免数据竞争）
+3. 不同作用域可以多次采用引用
+
+### 悬垂引用
+
+```rust
+fn main() {
+    let reference_to_nothing = dangle();
+}
+
+fn dangle() -> &String {
+    let s = String::from("hello");
+
+    &s  // 返回了引用，变量变成了悬垂状态，引用变量无效，会编译器报错
+        // 修改成返回 String 类型
+}
+```
+
+### 总结
+
+1. 在任意给定时间，要么 只能有一个可变引用，要么 只能有多个不可变引用。
+2. 引用必须总是有效的。
+
+## Slice 类型
+
+```rust
+    let s = String::from("hello world");
+
+    let hello = &s[0..5];
+    let world = &s[6..11];
+```
