@@ -1,7 +1,16 @@
 ---
 title: "Rust 编程语言 - 常见集合"
-date: 2023-02-16T20:05:08+08:00
-draft: true
+date: 2023-02-16
+tags:
+  - rust
+categories:
+  - 学习笔记
+type: posts
+lightgallery: true
+keywords: 
+  - 学习笔记
+  - 作用域
+
 ---
 
 ## vector 存储列表
