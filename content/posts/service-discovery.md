@@ -16,9 +16,8 @@ tags:
   - nacos 有命名空间，consul 开源版本不支持
   - 都可以做鉴权
   - 运维成本：都存在一定运维成本。
-- qcm 维护成本低。提供了基本的服务发现功能
-- nacos, consul,qcm 都提供了 配置管理功能。
-  - qcm，nacos watch 回调方式，qcm 使用的主动请求
+- nacos, consul 都提供了 配置管理功能。
+  - nacos watch 回调方式,使用的主动请求
 - core-dns 无需入侵代码。其他均有代码入侵
   - core-dns 不支持集群外的服务发现，其他服务支持
   - core-dns 对细粒度的心跳检测做的不太好。（比如针对某个接口的POST操作等）
