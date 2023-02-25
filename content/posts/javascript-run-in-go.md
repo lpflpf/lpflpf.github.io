@@ -171,7 +171,7 @@ print(abc)
 
 主要两个方面做性能测试：
 1. 测试简单的加法操作，主要测试高频的启动js引擎的操作
-2. 测试js的高频计算，测试不同js内部的执行效率
+2. 测试js的高频计算，测试在不同引擎中，js源码的执行效率
 
 [压测源码](https://github.com/lpflpf/lpflpf.github.io/tree/main/content/posts/javascript-run-in-go/benchmark)
 
