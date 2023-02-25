@@ -24,14 +24,16 @@ filebeat 是由golang 实现的，其间接引用了`https://github.com/dop251/g
   - es6 特性不支持
 - `github.com/dop251/goja` [Star 3.5K]
   - filebeat使用
-  - 思想来源于ottov
+  - 思想来源于otto
   - go 1.16
   - ECMAScript 5.1 引擎
   - 支持 regex and strict mode
+  - 在频繁执行较简单的js情况下，性能与otto基本持平，高于v8go
 - `github.com/rogchap/v8go` [Star 2.5K]
   - 基于google的V8引擎实现(chrome)
-  - cgo实现，性能最高,与系统兼容性略差.（可能需要自己编译v8)
-  - 兼容性比较好
+  - cgo实现，性能最高(在需要执行较长的js代码的情况下),与系统兼容性略差.（windows可能需要自己编译v8)
+  - javascript兼容性比较好
+  - 调试困难
 
 ### otto case
 
@@ -72,8 +74,6 @@ func main() {
                         fmt.Println(intVal)
                 }
         }
-
-
 }
 ```
 
@@ -167,4 +167,26 @@ print(abc)
 }
 ```
 
-## todo 性能测试
+## 性能测试
+
+主要两个方面做性能测试：
+1. 测试简单的加法操作，主要测试高频的启动js引擎的操作
+2. 测试js的高频计算，测试不同js内部的执行效率
+
+[压测源码](https://github.com/lpflpf/lpflpf.github.io/tree/main/content/posts/javascript-run-in-go/benchmark)
+
+对比如下：
+
+```
+goos: darwin
+goarch: arm64
+pkg: javascripttest
+BenchmarkOttoAdd-10        19362             61799 ns/op
+BenchmarkGojaAdd-10        15794             75839 ns/op
+BenchmarkV8Add-10           4783            260458 ns/op
+BenchmarkSumOtto-10           15          70687100 ns/op
+BenchmarkSumGoja-10           67          17269518 ns/op
+BenchmarkSumV8-10            489           2203052 ns/op
+PASS
+ok      javascripttest  9.329s
+```
