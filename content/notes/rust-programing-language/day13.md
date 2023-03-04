@@ -1,6 +1,6 @@
 ---
 title: "Rust 编程语言 - 智能指针"
-date: 2023-03-02
+date: 2023-03-04
 tags:
   - rust
 categories:
@@ -59,16 +59,133 @@ assert_eq!(5, *y);
 
 ### 自定义智能指针
 
-类似于Box 的new方法
+类似于Box 的new方法, 通过 Deref trait 实现智能指针
+
 ```rust
+use std::ops::Deref;
+
 struct MyBox<T>(T);
 
 impl<T> MyBox<T> {
     fn new(x: T) -> MyBox<T> {
+        // 此处是数据的值类型
         MyBox(x)
     }
 }
+
+impl<T> Deref for MyBox<T> {
+  type Target = T;
+
+  fn deref(&self) -> &Self::Target {
+    // 先获取第一个元素的指针，返回后可以通过解引用获取数据
+    &self.0
+  }
+}
+
+// 实现解引用的trait
 ```
+
+### drop trait 实现清理代码
+
+离开代码作用域时运行的trait方法; 离开作用域时自动执行; 类似于C++析构函数
+
+1. **离开drop调用顺序与定义顺序相反**
+2. 不能显示调用 drop 方法; 可以通过 std::mem::drop 强制清理
+
+```rust
+struct CustomSmartPointer {
+    data: String,
+}
+
+// 实现drop trait; 离开作用域时打印数据
+impl Drop for CustomSmartPointer {
+    fn drop(&mut self) {
+        println!("Dropping CustomSmartPointer with data `{}`!", self.data);
+    }
+}
+
+fn main() {
+    let c = CustomSmartPointer {
+        data: String::from("my stuff"),
+    };
+    let d = CustomSmartPointer {
+        data: String::from("other stuff"),
+    };
+    println!("CustomSmartPointers created.");
+// 执行顺序, 与定义顺序相反
+// CustomSmartPointers created.
+// Dropping CustomSmartPointer with data `other stuff`!
+// Dropping CustomSmartPointer with data `my stuff`!
+}
+```
+
+## Rc<T> 引用计数智能指针
+
+多所有权需要显示的使用Rust类型 Rc<T>;对上分配的内存供程序多个部分读取。**单线程场景**
+
+离开作用域会自动减引用计数
+
+```rust
+enum List {
+    Cons(i32, Rc<List>),
+    Nil,
+}
+
+use crate::List::{Cons, Nil};
+use std::rc::Rc;
+
+fn main() {
+    let a = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
+    // Rc::clone 只是增加引用计数，花费时间短，不进行深拷贝
+    let b = Cons(3, Rc::clone(&a));
+    let c = Cons(4, Rc::clone(&a));
+}
+```
+
+## RefCell<T>和内部可变性模式
+
+- 内部可变形是指：允许在不可变引用时，也可以改变数据。
+- 通过unsafe代码模糊Rust的可变性和借用规则 （需要手动检查）
+
+### 借用规则检查
+*对于Box<T> 借用规则的不可变性在编译时可以确定；而RefCell<T>则在运行时确定（所以在运行时可能引起panic）*
+**三者的比较**
+- Rc<T> 允许相同数据有多个所有者；Box<T> 和 RefCell<T> 有单一所有者。
+- Box<T> 允许在编译时执行不可变或可变借用检查；Rc<T>仅允许在编译时执行不可变借用检查；RefCell<T> 允许在运行时执行不可变或可变借用检查。
+- 因为 RefCell<T> 允许在运行时执行可变借用检查，所以我们可以在即便 RefCell<T> 自身是不可变的情况下修改其内部的值。  
+
+**常见用法**
+
+RefCell<T> 与 Rc<T> 结合使用，可以实现可变的多个引用。
+```rust
+#[derive(Debug)]
+enum List {
+    Cons(Rc<RefCell<i32>>, Rc<List>),
+    Nil,
+}
+
+use crate::List::{Cons, Nil};
+use std::cell::RefCell;
+use std::rc::Rc;
+
+fn main() {
+    let value = Rc::new(RefCell::new(5));
+
+    let a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil)));
+
+    // b, c 都引用了a，
+    let b = Cons(Rc::new(RefCell::new(3)), Rc::clone(&a));
+    let c = Cons(Rc::new(RefCell::new(4)), Rc::clone(&a));
+
+    *value.borrow_mut() += 10;
+    // 最后都看到可变引用 ,a,b,c 中的value值都变成了15
+    println!("a after = {:?}", a);
+    println!("b after = {:?}", b);
+    println!("c after = {:?}", c);
+}
+```
+
+
 
 ## 相关文章
 
