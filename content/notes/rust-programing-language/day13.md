@@ -1,6 +1,6 @@
 ---
 title: "Rust 编程语言 - 智能指针"
-date: 2023-03-04
+date: 2023-03-07
 tags:
   - rust
 categories:
@@ -185,6 +185,49 @@ fn main() {
 }
 ```
 
+## 引用循环导致内存泄漏
+
+一个循环的列表; 
+此处的内存泄漏指：循环里分配了很多内存并占有很长时间，这个程序会使用多于它所需要的内存，并有可能压垮系统并造成没有内存可供使用；因为Rust 不能捕获类似的循环引用。
+```rust
+fn main() {
+    let a = Rc::new(Cons(5, RefCell::new(Rc::new(Nil))));
+
+    println!("a initial rc count = {}", Rc::strong_count(&a));
+    println!("a next item = {:?}", a.tail());
+
+    let b = Rc::new(Cons(10, RefCell::new(Rc::clone(&a))));
+
+    println!("a rc count after b creation = {}", Rc::strong_count(&a));
+    println!("b initial rc count = {}", Rc::strong_count(&b));
+    println!("b next item = {:?}", b.tail());
+
+    if let Some(link) = a.tail() {
+        *link.borrow_mut() = Rc::clone(&b);
+    }
+
+    // 引用计数都变成了2
+    println!("b rc count after changing a = {}", Rc::strong_count(&b));
+    println!("a rc count after changing a = {}", Rc::strong_count(&a));
+}
+```
+
+### 避免引用循环：将 Rc<T> 变为 Weak<T>
+
+使用Weak 描述了非所属关系的引用，回收时不会重复回收,这样可以打破引用循环。
+
+```rust
+use std::cell::RefCell;
+use std::rc::{Rc, Weak};
+
+#[derive(Debug)]
+struct Node {
+    value: i32,
+    // 父节点弱引用, 可以引用父节点，但不拥有父节点
+    parent: RefCell<Weak<Node>>,
+    children: RefCell<Vec<Rc<Node>>>,
+}
+```
 
 
 ## 相关文章
