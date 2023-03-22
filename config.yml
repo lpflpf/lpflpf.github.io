@@ -46,23 +46,23 @@ params:
       auto: true
       position: "right"
     comment:
-      enable: true
+      enable: false
       disqus:
         enable: true
         shortname: lpflpf
-    library:
-      js:
-        googleAdsense: >-
-          https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4191383710205711
+#    library:
+#      js:
+#        googleAdsense: >-
+#          https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4191383710205711
     code:
       copy: true
       edit: false
       maxShownLines : 30
-  analytics:
-    enable: true
-    google:
-      id: "G-GZD9GWLDGZ"
-      anonymizeIP: true
+#  analytics:
+#    enable: true
+#    google:
+#      id: "G-GZD9GWLDGZ"
+#      anonymizeIP: true
   header:
     title:
       name: 搬砖程序员带你飞
