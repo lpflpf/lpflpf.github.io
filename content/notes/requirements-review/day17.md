@@ -2,9 +2,9 @@
 title: "需求分析到底要分析什么？怎么分析？"
 date: 2023-03-22
 tags:
-  - rust
-categories:
   - 软件工程之美
+categories:
+  - 读书笔记
 type: posts
 lightgallery: true
 description: "软件工程之美，需求分析篇，需求分析到底要分析什么"
