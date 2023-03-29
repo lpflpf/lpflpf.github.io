@@ -56,7 +56,7 @@ Client 支持并行消费多个Topic。消费时，会针对各Partition分别�
 
 提升并行度的另一种方案，就是在本地做二次Sharding，使用本地队列做真实消费。下面是一个示意图：
 
-![](kafka/consumer-sharding.png)
+![](consumer-sharding.png)
 
 每个goroutine通过分片规则重新分配到多个本地队列中。本地的队列个数(消费goroutine 数量)可以自由控制，使消费的并行度可控。
 
