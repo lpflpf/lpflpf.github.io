@@ -40,7 +40,7 @@ func (consumer *Consumer) ConsumeClaim(session sarama.ConsumerGroupSession, clai
 ```
 
 Client 支持并行消费多个Topic。消费时，会针对各Partition分别启动一个ConsumeClaim 的goroutine，获取队列数据并消费。如下图所示：
-![](kafka/consumer-common.png)
+![](consumer-common.png)
 每个goroutine 会标记消息的偏移量，以方便提交偏移至远程。当服务关闭重启后，会从远端获取当前消费的偏移，并继续消费。
 
 ## 存在的问题
@@ -173,5 +173,5 @@ func (consumer *Consumer) consume(){
 
 ## 引用
 
-[1] [如何设置kafka的分片数](https://www.confluent.io/blog/how-choose-number-topics-partitions-kafka-cluster/)
-[2] [Kafka Offset 不连续](https://stackoverflow.com/questions/54636524/kafka-streams-does-not-increment-offset-by-1-when-producing-to-topic)
+- [如何设置kafka的分片数](https://www.confluent.io/blog/how-choose-number-topics-partitions-kafka-cluster/)
+- [Kafka Offset 不连续](https://stackoverflow.com/questions/54636524/kafka-streams-does-not-increment-offset-by-1-when-producing-to-topic)
