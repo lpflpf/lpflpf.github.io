@@ -189,12 +189,12 @@ languages:
           url: 'https://mholt.github.io/curl-to-go/'
           name: curl-to-go
           params:
-            icon: fa-readme
+            icon: fa-solid fa-gear
           weight: 2
         - identifier: "jsondiff"
           url: 'https://www.sojson.com/jsondiff.html'
           name: jsondiff
           parent: Tools
           params:
-            icon: fa-apple-crate
+            icon: fa-solid fa-snowflake
           weight: 3
