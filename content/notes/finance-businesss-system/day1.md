@@ -48,7 +48,7 @@ keywords:
 3. 用户将前 3 个要素和短信验证码发给第三方支付公司;
 4. 第三方支付公司再将所有信息发送给银行进行确认
 
-![](authentication.png)
+{{<figure src="authentication.png" width="800" >}}
 
 ### 支付
 
@@ -78,7 +78,7 @@ keywords:
 6. 清算机构对白天发生的交易进行盘存，发现有一笔从买家开户行到第三方开户行的跨行转账还没有真正完成。
 7. 央行收到信息之后，将买家开户行在央行的存款准备金调低，并将第三方开户行在央行的存款准备金调高
 
-![](transfer-account.png)
+{{<figure src="transfer-account.png" width="800" >}}
 
 ## 外汇交易 (第三方支付公司)
 
@@ -86,12 +86,12 @@ keywords:
 
 一个账号只处理同一个币种的交易。外汇交易涉及到两个币种的货币,需要两个不同的账号。
 
-![](transfer-account2.png)
+{{<figure src="transfer-account2.png" width="800" >}}
 
 四个账号的两笔交易。
 交易成本：1 时间成本，外汇可能隔天才能到账；2 交易成本，按照次数收费；因此 ，为了节约成本，会一次行买入大量外汇，对应日间业务，当外汇储备下降到警戒线之后，再做下一笔大额外汇的购买。
 
-![](transfer-account3.png)
+{{<figure src="transfer-account3.png" width="800" >}}
 
 从买家到外汇结账的流通图。
 单存在的问题是，汇兑提供行帮助第三方支付公司购买外汇，但汇兑提供行的美元账户一直在出钱，需要B端外汇批发提供帮助。
@@ -100,7 +100,7 @@ keywords:
 
 一个处理外汇批发的巨头银行。
 
-![](transfer-account4.png)
+{{<figure src="transfer-account4.png" width="800" >}}
 
 ## 外币代付 (第三方支付公司)
 
