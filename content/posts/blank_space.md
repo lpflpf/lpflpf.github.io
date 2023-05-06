@@ -29,7 +29,7 @@ unicode 为 \u00A0, 在代码中可能会出现的编码错误(utf8 编码0xC2 0
 输入不间断空格，会将不间断空格连着的单词在一行展示。
 举个例子：
 
-{{<figure src="no-breaking-space.png" width="400">}}
+{{<figure src="no-breaking-space.jpg" width="400">}}
 
 上面英文使用了不间断空格，下面没有使用。所以上面的英文自动在一行展示，而下面没有。
 在word中输入不间断空格的方式为: (Ctrl + Shift + Space)
