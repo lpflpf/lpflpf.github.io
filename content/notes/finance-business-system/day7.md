@@ -57,7 +57,7 @@ graph LR;
 特点：顺序写，随机读
 存储：使用固定大小索引文件
 
-{{<figure src="day7-1.png" width="700"/>}}
+{{<figure src="day7-1.png" width="700">}}
 
 ## 怎样执行事件和改变状态？
 
@@ -87,7 +87,7 @@ graph LR;
 
 读采用了将事件复制，采用读模式的自动机计算做查询。
 
-{{<firgure src="day7-2.png" width="700"/>}}
+{{<figure src="day7-2.png" width="700">}}
 
 ## 正确性的本质
 
