@@ -169,8 +169,28 @@ languages:
           weight: 3
         - identifier: notes
           name: 读书笔记 
-          url: /notes/
           weight: 4
+          HasChildren: true
+        - identifier: requirements-review
+          name: 软件工程之美
+          url: /tags/软件工程之美/ 
+          weight: 4
+          parent: notes
+        - identifier: rust-programing-language
+          name: rust 学习
+          url: /tags/rust/
+          weight: 3
+          parent: notes
+        - identifier: finance-business-system
+          name: 财务金融系统
+          url: /tags/金融业务与系统/
+          weight: 3
+          parent: notes
+        - identifier: CppStudy
+          name: "c++ 学习笔记"
+          url: /tags/c++-学习笔记
+          weight: 2
+          parent: notes
         - identifier: about
           name: 关于
           url: /about/
