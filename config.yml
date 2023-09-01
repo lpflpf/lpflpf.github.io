@@ -23,7 +23,7 @@ markup:
       typographer: true
 params:
   bannerFont: fonts/noto-serif-sc-v7-latin_chinese-simplified-regular
-  description: ''
+  description: '搬砖程序员，记录实践中的疑难杂症，不断学习，不断提升'
   enable: true
   footer:
     icp: '<a target="_blank" href="http://beian.miit.gov.cn/">京ICP备17037267号</a>'
