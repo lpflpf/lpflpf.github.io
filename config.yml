@@ -32,7 +32,8 @@ params:
       href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502046463">京公网安备
       11010502046463号</a>
     hugo: false
-    author: lpflpf
+    author: 
+      name: lpflpf
   app:
     iconColor : "#5bbad5"
     defaultTheme: dark
